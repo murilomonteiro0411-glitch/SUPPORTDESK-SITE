@@ -1,0 +1,19 @@
+SUPPORTDESK PRO V11 - CENTRAL ADMINISTRATIVA
+
+ATUALIZAÇÃO DA V10
+1. Faça backup da pasta support-desk e do banco de dados.
+2. Substitua a pasta do site pela pasta support-desk incluída neste ZIP.
+3. Reinicie o Apache no XAMPP e pressione Ctrl + Shift + R.
+4. Acesse /support-desk/admin/dashboard.php com sua conta administradora.
+
+NÃO É NECESSÁRIO IMPORTAR SQL NOVAMENTE: a V11 usa as tabelas da V9/V10.
+
+ALTERAÇÕES:
+- Navbar administrativa simplificada: Painel de controle, sino de avisos e Sair.
+- Painel de controle reúne métricas, fila de atendimento, atalhos de gestão e últimas notificações.
+- Filtros de chamados: Em aberto, Alta prioridade e Todos.
+- Central de notificações com filtros Não lidas/Histórico, marcar uma ou todas como lidas.
+- Mantidas as telas de gestão de usuários, revogação de assinatura, pagamentos e aparência.
+- Notificações continuam internas ao site, não push em tempo real.
+
+TESTES RECOMENDADOS: entrar como admin; filtrar chamados; abrir chamado; responder e confirmar recebimento da notificação com outra conta; marcar lida; gerenciar usuário.

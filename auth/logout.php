@@ -1,0 +1,1 @@
+<?php require '../includes/core.php';$_SESSION=[];session_destroy();go('auth/login.php');

@@ -1,0 +1,14 @@
+SupportDesk PRO V8
+
+Mudanças: botões e cores com contraste melhorado, identificação de bandeiras Visa/Mastercard/American Express com cartões de TESTE, diagnóstico interativo e link no menu.
+
+INSTALAÇÃO: faça backup da pasta support-desk e do banco, substitua a pasta no htdocs e pressione Ctrl+Shift+R. Não precisa importar novo SQL ao atualizar a V7.
+
+PAGAMENTOS: cartões de teste são simulações e não devem ser apresentados como pagamentos reais.
+Visa: 4242 4242 4242 4242
+Mastercard: 5555 5555 5555 4444
+American Express: 3782 822463 10005
+Nome: CLIENTE TESTE | Validade: 12/30 | CVV: 123
+Pix real permanece condicionado às credenciais e verificação do provedor conforme V6.
+
+Novidade: /diagnostico.php.

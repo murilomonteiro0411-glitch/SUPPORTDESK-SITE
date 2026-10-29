@@ -1,0 +1,21 @@
+SUPPORTDESK V16 — RECUPERAÇÃO DE SENHA POR E-MAIL
+
+1. Faça backup da sua pasta support-desk e do banco de dados.
+2. Substitua a pasta pela deste ZIP.
+3. No phpMyAdmin, selecione support_desk e importe database/upgrade_v16.sql (uma vez).
+4. Cadastre-se em https://resend.com e valide um domínio de envio (DNS SPF/DKIM).
+5. Em config.php configure estas constantes, sem publicar sua chave:
+
+ define('RESEND_API_KEY', getenv('RESEND_API_KEY') ?: '');
+ define('MAIL_FROM', 'SupportDesk <suporte@seudominio.com.br>');
+ define('APP_PUBLIC_URL', 'https://seudominio.com.br/support-desk');
+
+6. Defina a variável RESEND_API_KEY no ambiente do PHP/Apache. Reinicie Apache.
+7. Certifique-se que a extensão PHP cURL está ativada no php.ini.
+8. Abra auth/login.php, clique em Esqueceu sua senha? e teste com e-mail cadastrado.
+9. Seu site precisa estar acessível por HTTPS público. Links com localhost NÃO abrem para usuários externos.
+
+IMPORTANTE: A API recebe a solicitação de envio, mas a chegada à caixa postal depende da reputação do domínio, filtros de spam e do destinatário. Verifique os logs de envio no painel Resend.
+
+Esta atualização não exige Composer e preserva usuários e chamados existentes.
+Nunca coloque a chave de API no JavaScript, em arquivos públicos ou no Git.

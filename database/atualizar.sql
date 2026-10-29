@@ -1,0 +1,7 @@
+-- Para bancos que já receberam upgrade_v3.sql. Faça backup ANTES.
+USE support_desk;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS active_plan VARCHAR(80) NULL;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS plan_expires_at DATETIME NULL;
+CREATE TABLE IF NOT EXISTS subscriptions (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,plan_name VARCHAR(80) NOT NULL,amount DECIMAL(10,2) NOT NULL,status ENUM('active','expired','cancelled') DEFAULT 'active',starts_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,expires_at DATETIME NULL,created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE) ENGINE=InnoDB;
+CREATE TABLE IF NOT EXISTS payments (id INT AUTO_INCREMENT PRIMARY KEY,user_id INT NOT NULL,subscription_id INT NULL,plan_name VARCHAR(80) NOT NULL,amount DECIMAL(10,2) NOT NULL,method ENUM('Cartão','PIX') NOT NULL,status ENUM('Aprovado','Pendente','Recusado') NOT NULL DEFAULT 'Aprovado',last_four VARCHAR(4) NULL,transaction_code VARCHAR(40) NOT NULL,created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,FOREIGN KEY (subscription_id) REFERENCES subscriptions(id) ON DELETE SET NULL) ENGINE=InnoDB;
+INSERT INTO users(name,email,password,role) VALUES ('Administrador','admin@supportdesk.com','$2y$12$G1IBqKkWpA1S5vb5jBlASevSubU4XyKBZrwqa5qtB.3CxHnBuph86','admin') ON DUPLICATE KEY UPDATE role='admin',password=VALUES(password);

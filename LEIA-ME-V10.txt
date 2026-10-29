@@ -1,0 +1,9 @@
+SupportDesk PRO V10 - CORREÇÃO VISUAL
+
+1. Faça backup da sua pasta support-desk.
+2. Substitua os arquivos pelo conteúdo da pasta support-desk deste ZIP.
+3. Mantenha o banco de dados atual: NENHUM SQL é necessário para esta atualização.
+4. Reinicie o Apache e pressione Ctrl+Shift+R no navegador.
+
+Erro corrigido: v9.css existia, mas não estava referenciado por includes/core.php.
+A nova folha v10.css adiciona estilos para os planos, painel de cliente, admin e controles em ambos os temas.

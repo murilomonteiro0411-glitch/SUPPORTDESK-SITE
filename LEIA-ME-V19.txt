@@ -1,0 +1,15 @@
+SUPPORTDESK PRO V19 - CONFIRMAÇÃO DO PERFIL NO LOGIN
+
+1. Faça backup da pasta atual.
+2. Extraia support-desk dentro de C:\xampp\htdocs.
+3. Reinicie o Apache e pressione Ctrl+Shift+R.
+
+Como funciona:
+- Digite seu e-mail e senha na tela de login.
+- Após a senha correta, o site mostra nome e foto do perfil e pergunta se a conta é sua.
+- Confirme para entrar ou clique em trocar de conta para voltar.
+- A confirmação dura no máximo três minutos.
+- O sistema não revela foto ou nome para quem não conhece a senha.
+- Suas configurações de perfil, planos e banco permanecem preservados.
+
+SQL: nenhuma migração necessária para a V19.

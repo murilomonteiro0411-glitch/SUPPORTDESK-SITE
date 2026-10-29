@@ -1,0 +1,25 @@
+SUPPORTDESK PRO V13
+
+Melhorias desta versão:
+- Logo SupportDesk aplicada no topo e no rodapé.
+- Novo footer profissional em todas as telas.
+- Central rápida de notificações em pop-up no cabeçalho.
+- Toast visual para avisos do sistema.
+- Admin recebe notificação quando um novo usuário é cadastrado.
+- Widget interativo de abertura rápida de chamados no painel do cliente.
+- Formulário de novo chamado aceita preenchimento automático por categoria.
+- Ajustes visuais adicionais no painel administrativo e nos componentes globais.
+
+Instalação:
+1. Faça backup da pasta support-desk atual.
+2. Extraia a nova pasta support-desk do ZIP em C:\xampp\htdocs\.
+3. Reinicie o Apache.
+4. Pressione Ctrl + Shift + R no navegador.
+
+Banco de dados:
+- Não há novas tabelas nesta atualização.
+- Continue usando o banco já atualizado até a V12.
+
+Observação:
+- A criação de usuário agora gera aviso ao administrador.
+- As notificações aparecem no sino do topo e na central de notificações.

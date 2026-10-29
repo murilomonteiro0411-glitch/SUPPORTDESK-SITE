@@ -1,0 +1,5 @@
+SupportDesk PRO V15 - Correção da central de notificações
+
+Instale substituindo a pasta support-desk no htdocs após realizar backup. Atualize o navegador com Ctrl+Shift+R. Não é necessário atualizar o banco de dados.
+
+Correções: admin pode abrir notifications.php; links para gerenciamento de usuários agora funcionam; notificações preservam a separação de acesso entre cliente e administrador; pop-up corrigido visualmente.

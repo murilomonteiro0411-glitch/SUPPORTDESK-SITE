@@ -1,0 +1,23 @@
+SUPPORTDESK V21 - VOLTA AO RESEND
+
+Esta versão usa a API HTTP da Resend para envio de links de recuperação de senha.
+Não requer PHPMailer, Composer nem Gmail SMTP.
+Os recursos de perfil, foto e confirmação de identidade da V19/V20 permanecem.
+
+1. BACKUP: faça backup da pasta support-desk e do banco antes de atualizar.
+2. Extraia a pasta support-desk para C:\xampp\htdocs\ substituindo a anterior.
+3. Se já instalou as atualizações SQL V16 e V18, não precisa importar SQL novo.
+4. Abra C:\xampp\apache\conf\extra\httpd-vhosts.conf e configure fora de VirtualHost:
+   SetEnv RESEND_API_KEY "SUA_NOVA_CHAVE_RESEND"
+5. Revogue qualquer chave antiga exposta em conversas ou prints.
+6. No config.php, MAIL_FROM está configurado como SupportDesk <onboarding@resend.dev> e APP_PUBLIC_URL como http://localhost/support-desk.
+7. Reinicie o Apache. Verifique que a extensão PHP cURL está habilitada no php.ini.
+8. Acesse http://localhost/support-desk/auth/forgot-password.php
+
+LIMITAÇÕES:
+- Com onboarding@resend.dev e sem domínio verificado, a Resend permite apenas envio ao endereço de sua própria conta Resend.
+- Para enviar a quaisquer clientes, verifique um domínio de remetente na Resend e substitua MAIL_FROM no config.php.
+- Links http://localhost/ só abrem no computador onde o site é executado.
+- A interface exibe aviso genérico mesmo quando o envio falha por segurança. Consulte o log de erros do PHP/Apache e o painel da Resend.
+
+A chave da API nunca deve ser colocada no HTML, JavaScript ou ZIP distribuído.

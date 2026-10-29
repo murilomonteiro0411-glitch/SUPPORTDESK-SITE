@@ -1,0 +1,17 @@
+SUPPORTDESK REFORMULADO — INSTALAÇÃO NO XAMPP
+
+1) PARE o Apache antes de trocar arquivos e faça backup do seu site e do banco.
+2) RENOMEIE a pasta C:\xampp\htdocs\support-desk para support-desk-backup.
+3) Extraia a pasta support-desk deste ZIP em C:\xampp\htdocs\ (nome EXATO: support-desk).
+4) Abra http://localhost/phpmyadmin e crie/abra o banco support_desk.
+5) BANCO NOVO: importe database/instalar.sql. BANCO ANTIGO: primeiro faça backup e execute database/atualizar.sql (se o banco já foi criado com support_desk.sql e recebeu upgrade_v3.sql). Para banco antigo sem upgrade_v2/v3, execute as migrações antigas antes ou prefira um banco novo.
+6) Ajuste config.php se o usuário ou senha do MySQL forem diferentes de root / vazio.
+7) Inicie Apache e MySQL e abra http://localhost/support-desk/
+8) Admin: admin@supportdesk.com / Admin@2026!  ALTERE A SENHA ANTES DE PUBLICAR O SITE.
+9) Cadastre uma conta normal, acesse Planos > Pix ou Cartão > Confirmar. Nenhuma cobrança real.
+10) Cartão somente de TESTE: 4242 4242 4242 4242 | CLIENTE TESTE | 12/30 | 123.
+
+IMPORTANTE: QR Code estático e local, com texto fictício; ele NÃO é Pix pagável.
+O código não contém gateway real nem armazena os dados do cartão.
+Foi validada a sintaxe PHP, mas não foi testado neste ambiente um MySQL/XAMPP integrado.
+Se a aplicação não abrir, confirme que a pasta se chama exatamente support-desk.

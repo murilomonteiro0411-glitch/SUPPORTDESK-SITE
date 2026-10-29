@@ -1,0 +1,29 @@
+SUPPORTDESK PRO V6 — CSS, ANIMACOES E PIX
+
+INSTALACAO:
+1. Backup da pasta support-desk e do banco.
+2. Substitua a pasta antiga pelo conteudo da pasta support-desk deste ZIP.
+3. Importe database/upgrade_v6.sql NO BANCO EXISTENTE, depois de upgrade_v5.sql.
+4. Pressione Ctrl+Shift+R no navegador para ignorar CSS antigo em cache.
+
+CSS: assets/css/polish.css corrige contrastes de ambos os temas, formularios,
+menus, cards, tabela, modais e textos de menor destaque. Inclui transicoes,
+animações de cards e heroi com suporte a prefers-reduced-motion.
+
+PIX: modo demonstrativo permanece disponivel sem configuracao.
+Para Pix de verdade use uma conta Mercado Pago habilitada e um access token.
+Configure MP_ACCESS_TOKEN como variavel de ambiente do Apache ou como
+constante no config.php (nao comite nem publique chaves). Em XAMPP pode usar:
+   define('MP_ACCESS_TOKEN', 'SEU_TOKEN_PRIVADO_AQUI');
+O checkout usa API POST /v1/payments e o X-Idempotency-Key.
+O QR real e o copia-e-cola sao fornecidos pelo Mercado Pago.
+Uma tela verifica periodicamente o pagamento via API GET /v1/payments/{id}.
+Somente a resposta 'approved' validada no servidor libera o painel.
+Para testar recebimento real, use credenciais de PRODUCAO adequadas a sua
+conta e hospede em HTTPS. Nao confunda credenciais de teste com cobranças reais.
+O modo demonstrativo ainda ativa conta simulada e nao realiza cobranca.
+Este projeto nao implementa webhook, estornos ou renovacao automatica. O
+reconhecimento do Pix ocorre quando o cliente abre a pagina pendente.
+NUNCA coloque token no JavaScript. NUNCA hospede projeto com senha admin padrao.
+
+Requisitos PHP: PDO MySQL, cURL, extensao OpenSSL habilitada.

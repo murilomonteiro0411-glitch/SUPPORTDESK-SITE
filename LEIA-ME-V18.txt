@@ -1,0 +1,11 @@
+SUPPORTDESK PRO V18 - PERFIL E PLANOS
+
+1. Backup da pasta atual e do banco.
+2. Substitua a pasta support-desk no htdocs.
+3. No phpMyAdmin execute database/upgrade_v18.sql UMA VEZ no banco support_desk (NAO executar instalar.sql novamente).
+4. Reinicie Apache e recarregue o navegador (Ctrl+Shift+R).
+5. Entre em Meu perfil para trocar nome, e-mail, senha e foto.
+6. Essencial: 8 chamados/mes, Profissional: 12, Empresarial: ilimitados.
+
+Nao altera assinaturas existentes ou historico.
+A configuracao de e-mail da V17 continua sendo exigida para recuperacao de senha.

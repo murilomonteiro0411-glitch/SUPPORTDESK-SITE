@@ -1,0 +1,14 @@
+SUPPORTDESK V22 - MODERACAO DE FOTOS
+
+A area admin/users.php exibe as fotos dos membros ao lado dos nomes.
+Para remover uma foto de um cliente, clique em Remover foto e confirme.
+Somente administradores autenticados podem executar essa acao.
+O perfil do cliente continua ativo e sem a foto; o historico de chamados nao muda.
+
+INSTALACAO:
+1. Faca backup da pasta e do banco.
+2. Substitua support-desk em C:\xampp\htdocs\ pela pasta do ZIP.
+3. Preserve a pasta uploads/avatars existente com suas fotos atuais ao atualizar.
+4. Reinicie o Apache e atualize com Ctrl+Shift+R.
+
+BANCO: Nao requer novo SQL; usa users.avatar_file existente desde a V18.

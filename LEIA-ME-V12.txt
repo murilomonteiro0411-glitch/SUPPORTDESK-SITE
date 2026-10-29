@@ -1,0 +1,8 @@
+SupportDesk PRO V12 - correção do painel administrativo
+
+1. Faça backup da pasta atual.
+2. Copie os arquivos deste pacote para C:\xampp\htdocs\support-desk, substituindo os antigos.
+3. Reinicie Apache e pressione Ctrl+Shift+R no painel.
+4. Banco de dados: nenhuma alteração SQL necessária.
+
+Correção: V11.css não estava incluído em includes/core.php. V12 adiciona as referências aos estilos e aprimora a responsividade.

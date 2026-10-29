@@ -1,0 +1,16 @@
+SUPPORTDESK PRO V5 — INSTALAÇÃO NO XAMPP
+
+1) Faça backup da pasta C:\xampp\htdocs\support-desk e exporte seu banco pelo phpMyAdmin.
+2) Substitua a pasta do site pelos arquivos deste ZIP.
+3) BANCO EXISTENTE: importe SOMENTE database/upgrade_v5.sql se estiver usando o banco da versão reformulada anterior.
+4) BANCO NOVO: importe database/instalar.sql (não precisa upgrade_v5.sql).
+5) Verifique usuário, senha e nome do banco em config.php.
+6) Abra http://localhost/support-desk/ e faça Ctrl + Shift + R.
+
+ADMIN: admin@supportdesk.com / Admin@2026! (senha inicial da versão anterior; altere imediatamente em ambiente publicado).
+Controle de assinatura: um usuário sem plano ativo é redirecionado da área de chamados, inclusive pelas URLs diretas e envio de formulários.
+Admin: gerenciamento de chamados/status/prioridades/respostas, bloqueio de usuário, revogação de planos, pagamentos demonstrativos e personalização visual.
+Tema: botão Claro/Escuro na barra superior, preferência salva apenas no navegador.
+Pagamento é SIMULADO e liberará 30 dias para fins acadêmicos; não há cobrança ou integração real Pix.
+ATENÇÃO: este pacote usa a mesma estrutura de URLs /support-desk/ e requer PHP 8+, PDO MySQL.
+Para produção real, integre um provedor de pagamento, confirme pagamentos somente por webhook autenticado e implemente troca/recuperação de senha, logs e validações adicionais.

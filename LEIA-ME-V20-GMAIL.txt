@@ -1,0 +1,23 @@
+SUPPORTDESK V20 — GMAIL SMTP / PHPMailer
+
+1) SUBSTITUA os arquivos da V19 pelos do pacote, após fazer backup.
+2) INSTALE A BIBLIOTECA: clique com botão direito em instalar-phpmailer.ps1 e execute com PowerShell ou abra PowerShell nesta pasta e rode:
+   powershell -ExecutionPolicy Bypass -File .\instalar-phpmailer.ps1
+   É necessário internet para baixar PHPMailer do repositório oficial. A biblioteca NÃO está embutida no ZIP.
+3) ATIVE a verificação em duas etapas na conta Google que vai enviar os e-mails.
+4) Gere uma SENHA DE APP em https://myaccount.google.com/apppasswords
+   Não use a senha normal da conta Google. Nem todas as contas oferecem senhas de app.
+5) Abra C:\xampp\apache\conf\extra\httpd-vhosts.conf e, fora de blocos VirtualHost, adicione:
+   SetEnv GMAIL_SMTP_USER "seuemail@gmail.com"
+   SetEnv GMAIL_APP_PASSWORD "SUA_SENHA_DE_APP_DE_16_CARACTERES"
+   (Não coloque espaços extras na senha de app.)
+   Não coloque senhas dentro de config.php ou do banco.
+6) Reinicie Apache (Stop/Start). Garanta que a extensão OpenSSL do PHP está habilitada.
+7) Importe database/upgrade_v16.sql apenas se você AINDA NÃO o importou.
+8) Teste: http://localhost/support-desk/auth/forgot-password.php
+
+ATENÇÃO: O link localhost recebido por e-mail só pode ser aberto no computador do XAMPP.
+O Gmail SMTP pode enviar para outros endereços, mas o link localhost NÃO funcionará em outro computador/celular.
+O formulário dá uma resposta genérica por segurança. Para diagnosticar falhas, veja os logs do PHP/Apache.
+NÃO há envio real testado neste pacote: faltam suas credenciais locais e biblioteca instalada no XAMPP.
+Fonte PHPMailer: https://github.com/PHPMailer/PHPMailer

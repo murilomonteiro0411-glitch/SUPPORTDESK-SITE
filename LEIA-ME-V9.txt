@@ -1,0 +1,22 @@
+SUPPORTDESK PRO V9
+==================
+1. Faça backup da pasta e do banco de dados.
+2. Substitua a pasta support-desk dentro de C:\xampp\htdocs pela pasta contida no ZIP.
+3. Em phpMyAdmin, selecione o banco support_desk e execute APENAS database/upgrade_v9.sql se estiver atualizando a V8. NÃO rode instalar.sql em banco existente.
+4. Abra http://localhost/support-desk/ e atualize com Ctrl+Shift+R.
+5. Para instalar um banco NOVO, importe database/instalar.sql (que já contém a tabela de notificações).
+
+DIFERENÇAS DE PLANOS
+Essencial: R$29,90 / 30 dias, 3 chamados novos por mês.
+Profissional: R$59,90 / 30 dias, 12 chamados novos por mês.
+Empresarial: R$99,90 / 30 dias, chamados novos ilimitados.
+Todos acompanham e respondem seus chamados existentes. O limite é calculado por mês de calendário. Os prazos de resposta são metas ilustrativas, sem automação de SLA.
+
+NOTIFICAÇÕES
+Novos chamados e respostas de clientes notificam todos os administradores habilitados.
+Respostas e mudanças de status do admin notificam o dono do chamado.
+As notificações ficam na central /notifications.php e são atualizadas quando o usuário recarrega a página (não há push em tempo real).
+
+IMPORTANTE
+O pagamento fictício está disponível somente para fins acadêmicos e deve ser identificado como demonstração. O Pix real é opcional e só funciona com credenciais válidas e configurações adequadas da API do Mercado Pago.
+O código precisa ser testado localmente com PHP e MySQL do seu XAMPP.

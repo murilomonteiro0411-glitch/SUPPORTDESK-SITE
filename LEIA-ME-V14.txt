@@ -1,0 +1,10 @@
+SUPPORTDESK PRO V14 — VERSÃO FINAL
+
+Novidades:
+• Navbar profissional com melhor alinhamento de logo, botões e menus.
+• Estados de chamados com cores e bolinhas: Aberto verde, Em andamento amarelo, Resolvido azul, Fechado vermelho.
+• Melhor acabamento em cards, tabelas, dashboard, atalhos e rodapé.
+• Responsividade e respeito a movimento reduzido.
+
+INSTALAÇÃO: Faça backup e substitua a pasta support-desk em C:\xampp\htdocs\. Reinicie Apache e pressione Ctrl+Shift+R.
+Banco de dados: NÃO requer nova importação SQL na migração da V13.

@@ -1,0 +1,14 @@
+
+/* V19: confirmação segura de identidade após validar a senha */
+.identity-login-wrap{min-height:calc(100vh - 380px);display:grid;place-items:center;padding:38px 12px 60px}
+.identity-login-wrap .card{width:min(100%,490px);padding:clamp(24px,4vw,38px);border-radius:26px}
+.identity-login-wrap h1{font-size:clamp(1.75rem,4vw,2.25rem);margin:9px 0}
+.identity-profile{display:flex;align-items:center;flex-direction:column;gap:9px;padding:28px 18px;margin:22px 0;border:1px solid rgba(72,145,255,.26);border-radius:22px;background:linear-gradient(145deg,rgba(35,120,250,.14),rgba(71,122,233,.03));text-align:center}
+.identity-avatar{width:100px;height:100px;border-radius:50%;display:grid;place-items:center;overflow:hidden;background:#136cff;color:white;font-size:2.8rem;font-weight:800;border:4px solid rgba(155,198,255,.7);box-shadow:0 14px 30px rgba(15,94,236,.25)}
+.identity-avatar img{width:100%;height:100%;object-fit:cover}
+.identity-profile strong{font-size:1.3rem;overflow-wrap:anywhere;color:var(--txt,#edf3ff)}
+.identity-profile span{font-size:.94rem;color:var(--muted,#a9b7d0);overflow-wrap:anywhere}
+.identity-profile small{border:1px solid rgba(51,133,255,.3);padding:5px 12px;border-radius:30px;color:var(--muted,#a9b7d0)}
+.identity-secondary{margin-top:10px}
+.identity-hint{margin-top:20px;font-size:.81rem;color:var(--muted,#a9b7d0);text-align:center}
+html[data-theme=light] .identity-profile strong{color:#102440}

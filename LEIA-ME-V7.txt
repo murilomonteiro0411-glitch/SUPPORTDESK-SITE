@@ -1,0 +1,13 @@
+SUPPORTDESK PRO V7 — ATUALIZAÇÃO DE CONTEÚDO
+
+NOVAS PÁGINAS: index.php renovada, servicos.php, como-funciona.php, sobre.php, faq.php.
+NOVO ESTILO: assets/css/v7.css.
+MENU E RODAPÉ: includes/core.php.
+
+INSTALAÇÃO: faça backup da pasta support-desk atual, substitua-a pela pasta do ZIP em C:\xampp\htdocs\support-desk e force atualização com Ctrl+Shift+R.
+
+BANCO: NENHUMA ALTERAÇÃO DE SQL NESTA VERSÃO. Use seu banco da V6 sem importação extra. Para instalação limpa, veja database/instalar.sql.
+
+As páginas institucionais são públicas. As proteções de acesso a chamados e funções administrativas existentes foram preservadas. Pagamentos demo continuam demo. Integração Pix real exige configuração prévia.
+
+TESTES: valide navegação, temas, login, chamados e pagamentos no XAMPP local.

@@ -1,0 +1,14 @@
+SUPPORTDESK - RECUPERACAO DE SENHA NO LOCALHOST
+
+1. Importe database/upgrade_v16.sql no banco support_desk, se ainda nao importou.
+2. Configure sua NOVA chave Resend no Apache. Em C:\xampp\apache\conf\extra\httpd-vhosts.conf, fora de qualquer VirtualHost adicione:
+SetEnv RESEND_API_KEY "SUA_CHAVE_NOVA"
+Reinicie o Apache e confirme se mod_env esta ativo (normalmente esta no XAMPP).
+3. O config.php ja esta com MAIL_FROM = SupportDesk <onboarding@resend.dev> e APP_PUBLIC_URL = http://localhost/support-desk.
+4. Entre no Resend com seu Gmail. Com onboarding@resend.dev, apenas o e-mail DA SUA PROPRIA CONTA RESEND pode receber emails reais. Cadastre esse mesmo email no SupportDesk.
+5. Abra http://localhost/support-desk/auth/forgot-password.php e solicite link. Verifique caixa de entrada/spam e logs do Resend.
+6. Abra o link no MESMO computador onde XAMPP esta rodando.
+
+OBS: Sem dominio verificado, a Resend nao envia para clientes arbitrarios. Para isso, voce precisa de dominio verificado ou outro servico de email que aceite remetente autorizado. Isso nao e um defeito do PHP.
+
+SEGURANCA: A chave antiga foi exposta. Revogue-a no painel Resend e crie uma nova. Nunca envie a chave dentro de um ZIP compartilhado.
